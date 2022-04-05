@@ -5,15 +5,46 @@
 body {
   background-image: url("../img/Rectangle 1.jpg");
   background-size: cover;
+  background-position: right top;
   margin: 0;
   min-height: 100vh;
+  color: white;
 }
 body > header {
   border: 2px dashed rgb(124, 39, 96);
+  display: flex;
+  justify-content: space-between;
 }
 body nav {
-  border: 2px dashed rgb(77, 153, 74);
+  position: relative;
+  min-height: 48px;
 }
-body .hamburger {
-  border: 2px dashed rgb(187, 133, 33);
+body nav #toggler {
+  display: none;
+}
+body nav label {
+  border: 4px dashed yellow;
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  right: 0;
+  top: 0;
+}
+body nav ul {
+  display: none;
+  border: 2px dashed red;
+  flex-direction: column;
+  position: absolute;
+  right: 0;
+  top: 48px;
+  margin: 0;
+}
+body nav #toggler:checked ~ ul {
+  display: flex;
+}
+
+@media (min-width: 768px) {
+  nav {
+    display: flex;
+  }
 }/*# sourceMappingURL=style.css.map */
