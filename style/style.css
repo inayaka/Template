@@ -29,6 +29,20 @@ body nav label {
   height: 48px;
   right: 0;
   top: 0;
+  cursor: pointer;
+}
+body nav label div {
+  border: 2px solid black;
+  position: absolute;
+  width: 80%;
+  left: 10%;
+  height: 10%;
+}
+body nav label div:nth-child(1) {
+  top: 17, 5%;
+}
+body nav label div:nth-child(2) {
+  top: 40px;
 }
 body nav ul {
   display: none;
