@@ -1,0 +1,30 @@
+$backgrundColor: rgb(96, 168, 96);
+
+
+*{box-sizing: border-box;} //trzyma stronę
+
+body{
+    //background-color: rgb(187, 231, 225);
+    
+    background-image: url("../img/Rectangle 1.jpg");
+    
+    //background-size: 100% auto; - dostosowuje się do szerokości strony
+    background-size: cover;   // do przykrycia jakiegoś elementu
+    //background-size: contain;  zmieści się w borderze
+    margin: 0;
+    min-height: 100vh;
+    // border: 10px dashed blue; - tutaj dla podglądu
+    
+>header{
+    border: 2px dashed rgb(124, 39, 96);
+}
+nav{
+    border: 2px dashed rgb(77, 153, 74)
+}
+.hamburger{
+    border: 2px dashed rgb(187, 133, 33);
+}
+}
+main{
+
+}
