@@ -24,7 +24,7 @@ body > header .pageLogo a {
   text-decoration: none;
   display: flex;
 }
-body > header .pageLogo a b {
+body > header .pageLogo b {
   font-size: 30px;
 }
 body > header nav {
@@ -88,7 +88,7 @@ body > header nav #toggler:checked ~ ul {
   display: flex;
 }
 body > header nav #toggler:checked ~ label {
-  border-color: blue;
+  border-color: rgba(0, 0, 255, 0.445);
 }
 body > header nav #toggler:checked ~ label div:nth-child(1) {
   background-color: red;
@@ -103,10 +103,10 @@ body > header nav #toggler:checked ~ label div:nth-child(3) {
   top: 45%;
 }
 @media (min-width: 768px) {
-  body label {
+  body > header label {
     display: none;
   }
-  body ul {
+  body > header ul {
     display: flex !important;
     flex-direction: row !important;
     position: static !important;
