@@ -23,7 +23,7 @@ body{
         border: 2px dashed rgb(124, 39, 96);
         display:flex;
         justify-content: space-between;
-        }
+    }
    
         nav{  
             //border: 2px dashed rgb(77, 153, 74);
@@ -42,7 +42,7 @@ body{
                 
                      // HAMBURGER
                 div{               
-                    border:2px solid rgb(128, 123, 50);
+                    border:2px solid rgb(218, 205, 25);
                     position: absolute;
                     width: 80%;
                     left:10%;
@@ -91,7 +91,7 @@ body{
     //.hamburger{
     //    border: 2px dashed rgb(187, 133, 33);
     //}
-    }
+        }
     @media (min-width:768px){
         nav{display: flex;
         }
