@@ -117,17 +117,17 @@ body main .wrapper {
   border: 5px dashed green;
   display: flex;
 }
-body main > header {
+body main .wrapper > header {
   border: 5px dashed blue;
   flex: 1;
 }
-body main > header h1 {
+body main .wrapper > header h1 {
   margin-bottom: 0;
 }
-body main > header h2 {
+body main .wrapper > header h2 {
   margin-top: 0;
 }
-body main > header button {
+body main .wrapper > header button {
   background-color: transparent;
   border: 10px solid #fff;
   min-height: 1.5em;
@@ -135,12 +135,12 @@ body main > header button {
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  padding: 1em;
+  padding: 0.5em 2.5em;
 }
-body main > article {
+body main .wrapper > article {
   flex: 1;
 }
-body main > article .playButton {
+body main .wrapper > article .playButton {
   background-color: transparent;
   border: 10px solid #fff;
   min-height: 1.5em;
@@ -148,15 +148,14 @@ body main > article .playButton {
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  padding: 1em;
+  padding: 0;
 }
-body main > article header .container {
-  border: 5px dashed black;
+body main .wrapper > article header .container {
   overflow-y: scroll;
   max-height: 45vh;
 }
 @media (min-widht: 768px) {
-  body {
+  body main {
     display: flex;
   }
 }/*# sourceMappingURL=style.css.map */
