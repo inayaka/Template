@@ -14,19 +14,16 @@ $buttonSize: 48px;
     // DO PRZYCISKU PLAY
     //padding: 1em;
     padding: $padding;
-
 }
 
-*{box-sizing: border-box;} //trzyma stronę
+// @include borderButton(.5em 2.5em);
 
+
+*{box-sizing: border-box;} //trzyma stronę
 body{
-    //background-color: rgb(187, 231, 225);
-    
     background-image: url("../img/Rectangle\ 1.jpg");
-    
-    //background-size: 100% auto; - dostosowuje się do szerokości strony
-    background-size: cover;
     //cover: do przykrycia jakiegoś elementu, *cover przykrywa cały obszar
+    background-size: cover;
     //background-size: contain;  zmieści się w borderze
     //background-repeat: no-repeat;
     background-position: center top;
@@ -36,7 +33,7 @@ body{
     // border: 10px dashed blue; - tutaj dla podglądu
     color: white;
 
-    >header{
+    > header{
     
         padding: 1em 2em;
         display:flex;
@@ -46,8 +43,7 @@ body{
         > * {
             display: flex;
             align-items: center;
-        }
-    
+        }    
 
         .pageLogo{
             //border: 2px dashed red;
@@ -59,15 +55,13 @@ body{
                     font-size: 30px;
                 }
             }
-        }
-        
+        }        
         
         nav{  
             //border: 2px dashed rgb(77, 153, 74);
             position:relative;
             min-height: $buttonSize;
-            // DOMYSLNE WYSWIETLANE+
-            
+            // DOMYSLNE WYSWIETLANE+                    
             #toggler{display:none;}   
                         
             label{
@@ -92,32 +86,26 @@ body{
                     // &:hover{
                         // border-color: green;
                         //}
-                        &:nth-child(1){
-                            top:17.5%;
-                            //border-color:red;
-                        }
-                        &:nth-child(2){
-                            top:45%;
-                            //border-color:red;
-                        }
-                        &:nth-child(3){
-                            top:72.5%;
-                            //div:nth-child(1){   
-                        }
+                    &:nth-child(1){
+                        top:17.5%;
+                    }
+                    &:nth-child(2){
+                        top:45%;                            
+                    }
+                    &:nth-child(3){
+                        top:72.5%;
+                        //div:nth-child(1){   
+                    }
                 }
             }
-                    // display: none;
-                    
-                            
-            ul{
-                
+                    // display: none;                    
+                ul{                                  
                 //border:2px dashed red;
                 background-color: rgba(255, 255, 255, 0.2);
                 border-radius: 10px;
                 padding: 0 .7em;
                 list-style: none;
                 //display:flex;
-                
                 display: none;
                 flex-direction: column;
                 position: absolute;
@@ -142,8 +130,7 @@ body{
                 //   display:flex;
                 //#toggler:checked ~ label{
             
-            // PO KLIKNIĘCIU NA HAMBURGER
-    
+            // PO KLIKNIĘCIU NA HAMBURGER    
             #toggler:checked{
                 ~ ul {display: flex;}
                 ~ label {
@@ -161,57 +148,66 @@ body{
                             transform: rotate(-45deg);
                             top:45%;
                         }
-                    }
-            
+                    }            
                 }
             }
-            
-            @media (min-width:768px){
-                    //nav{
+
+            // NA DUŻE EKRANY
+            @media (min-width:768px){                    
                 label{display: none;}
                 ul{
                     display: flex;
                     flex-direction: row;
                     position: static;
                 }
-            }            
+            }
+            
+            
+
+
         }
+
+        // NA DUŻE EKRANY
+    // @media (min-width:768px){
+    //   nav{
+    //     ul{
+    //       display:flex;
+    //     }
+    //   }
+    // }
+
     }
 
-        
     main{
-        //border:5px dashed rgb(185, 30, 24);
         margin-top:10vh;
+        //border:5px dashed rgb(185, 30, 24);
         padding: 0 1em;
-
         .wrapper{
             //border:5px dashed rgb(197, 187, 39);
-            //display:flex;
-        
+            //display:flex;                 
             > header{
                 border:5px dashed blue;
                 flex:1;
-                h1{margin-bottom: 0;
+                h1{
+                    margin-bottom: 0;
                 }
                 h2{
                     margin-top: 0;
                 }
-                    button{
-                    @include borderButton(.5em 2.5em); 
-                    margin-bottom: 10vh;
-                    }
+                button{
+                @include borderButton(.5em 2.5em); 
+                margin-bottom: 10vh;
+                }
             }
-            >article{
-                //border: 2px dashed red;
+            >article{                
                 flex:1;
-                flex: flex;
+                display: flex;
                 align-items:flex-start;
 
                 .playButton{
                     @include borderButton(1.5em);
                     border-radius: 50%;
-                    position: relative;
-                
+                    position: relative;                                   
                     span{                        
                         position: absolute;
                         top: 0;
@@ -221,38 +217,60 @@ body{
                 }
                 header{
                     .container{
-                        padding: 1em;
+                        padding-left: 1em;
                         overflow-y: scroll;
                         max-height:45vh;
                     }
                 }
             }
+            //  PRZENIESIONE NIŻEJ !!!!!
+            // // URZĄDZENIA SZERSZE NIŻ 768px
+            // @media(min-width:768px){
+            //   display:flex;
+            // }          
+        }
+            // .about{
+            //   border:2px dashed red;
+            // }
+            // URZĄDZENIA SZERSZE NIŻ 768px
             @media(min-width:768px){
-                display:flex;
+                margin-left:15vw;
+                .wrapper{
+                    display:flex;
+                }
+                .about{
+                    width: 40%;
+                }
             }
+    } 
 
+
+    footer{
+        .social{
+            display: flex;
+            justify-content: space-evenly;
+            padding: 2em;
         }
-        .about{
-            border: 2px dashed red; 
-            width: 40%;           
-        }
-        footer{
-            border:111px rgb(218, 32, 209);
+    }
+    @media (min-width:768px){
+        footer{            
             position:fixed;
             left:0;
-            bottom: 0; 
-            .social div{
-                margin: .8em;
+            bottom: 0;
+            .social {
+                flex-direction: column;
+                div{
+                    margin: .8em;
+                }
             }
-        
-        } 
+        }
+    }
 
-    } 
          
 }
  
             //.hamburger{
             //    border: 2px dashed rgb(187, 133, 33);
             //
-
             // na duże ekrany (media)
+            //background-size: 100% auto; - dostosowuje się do szerokości strony
