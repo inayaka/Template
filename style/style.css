@@ -5,7 +5,7 @@
 body {
   background-image: url("../img/Rectangle 1.jpg");
   background-size: cover;
-  background-position: right top;
+  background-position: center top;
   margin: 0;
   min-height: 100vh;
   color: white;
@@ -24,7 +24,7 @@ body > header .pageLogo a {
   text-decoration: none;
   display: flex;
 }
-body > header .pageLogo b {
+body > header .pageLogo a b {
   font-size: 30px;
 }
 body > header nav {
@@ -35,7 +35,6 @@ body > header nav #toggler {
   display: none;
 }
 body > header nav label {
-  border: 4px dashed yellow;
   position: absolute;
   width: 48px;
   height: 48px;
@@ -45,7 +44,7 @@ body > header nav label {
 }
 body > header nav label div {
   transition: 0.5s;
-  border: 2px solid rgb(218, 205, 25);
+  background-color: rgb(255, 255, 255);
   border-radius: 5px;
   position: absolute;
   width: 80%;
@@ -62,8 +61,8 @@ body > header nav label div:nth-child(3) {
   top: 72.5%;
 }
 body > header nav ul {
+  background-color: rgba(255, 255, 255, 0.2);
   border-radius: 10px;
-  background-color: rgba(96, 96, 138, 0.658);
   padding: 0 0.7em;
   list-style: none;
   display: none;
@@ -74,7 +73,7 @@ body > header nav ul {
   margin: 0;
 }
 body > header nav ul li {
-  padding: 0.5em 0.7em;
+  padding: 0.7em 0.7em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -88,11 +87,10 @@ body > header nav #toggler:checked ~ ul {
   display: flex;
 }
 body > header nav #toggler:checked ~ label {
-  border-color: rgba(0, 0, 255, 0.445);
+  border-color: rgba(163, 163, 206, 0.603);
 }
 body > header nav #toggler:checked ~ label div:nth-child(1) {
-  background-color: red;
-  transform: rotate(45deg);
+  transform: rotate(-135deg);
   top: 45%;
 }
 body > header nav #toggler:checked ~ label div:nth-child(2) {
@@ -103,12 +101,30 @@ body > header nav #toggler:checked ~ label div:nth-child(3) {
   top: 45%;
 }
 @media (min-width: 768px) {
-  body > header label {
+  body > header nav label {
     display: none;
   }
-  body > header ul {
+  body > header nav ul {
     display: flex !important;
     flex-direction: row !important;
     position: static !important;
   }
+}
+body > header main {
+  border: 5px dashed rgb(187, 174, 59);
+}
+body > header main .wrapper {
+  border: 5px dashed green;
+  display: flex;
+}
+body > header main > header {
+  border: 5px dashed blue;
+}
+body > header main > article {
+  flex: 1;
+}
+body > header main > article header .container {
+  border: 5px dashed black;
+  overflow-y: scroll;
+  max-height: 45vh;
 }/*# sourceMappingURL=style.css.map */
