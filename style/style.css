@@ -3,12 +3,12 @@
 }
 
 body {
-  background-image: url("../img/Rectangle 1.jpg");
+  background-image: url("../img/kalen-emsley-Bkci_8qcdvQ-unsplash.jpg");
   background-size: cover;
   background-position: center top;
   margin: 0;
   min-height: 100vh;
-  color: white;
+  color: #f9fafa;
 }
 body > header {
   padding: 1em 2em;
@@ -25,9 +25,10 @@ body > header .pageLogo a {
   display: flex;
 }
 body > header .pageLogo a b {
-  font-size: 30px;
+  font-size: 43px;
 }
 body > header nav {
+  border: 2px dashed rgb(77, 153, 74);
   position: relative;
   min-height: 48px;
 }
@@ -115,7 +116,6 @@ body main {
   padding: 0 1em;
 }
 body main .wrapper > header {
-  border: 5px dashed blue;
   flex: 1;
 }
 body main .wrapper > header h1 {
@@ -137,7 +137,7 @@ body main .wrapper > header button {
 }
 body main .wrapper > article {
   flex: 1;
-  flex: flex;
+  display: flex;
   align-items: flex-start;
 }
 body main .wrapper > article .playButton {
@@ -156,28 +156,39 @@ body main .wrapper > article .playButton span {
   position: absolute;
   top: 0;
   left: 0.245em;
-  font-size: 2.5em;
+  font-size: 2.3em;
 }
 body main .wrapper > article header .container {
-  padding: 1em;
+  padding-left: 1em;
   overflow-y: scroll;
   max-height: 45vh;
 }
 @media (min-width: 768px) {
+  body main {
+    margin-left: 15vw;
+  }
   body main .wrapper {
     display: flex;
   }
+  body main .about {
+    width: 40%;
+  }
 }
-body main .about {
-  border: 2px dashed red;
-  width: 40%;
+body footer .social {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2em;
 }
-body main footer {
-  border: 111px rgb(218, 32, 209);
-  position: fixed;
-  left: 0;
-  bottom: 0;
-}
-body main footer .social div {
-  margin: 0.8em;
+@media (min-width: 768px) {
+  body footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+  }
+  body footer .social {
+    flex-direction: column;
+  }
+  body footer .social div {
+    margin: 0.8em;
+  }
 }/*# sourceMappingURL=style.css.map */

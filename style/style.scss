@@ -1,12 +1,13 @@
 $bgColor:#b37676;
 $buttonSize: 48px;
 
+
 @mixin borderButton ($padding){
     background-color: transparent;
     border:2px solid #fff;
     min-height: 1.5em;
     border-radius:1.5em;
-    color:#fff;
+    color: #fff;
     cursor:pointer;
     display:inline-block;
     // DO PRZYCISKU VIEW PROGRAMM
@@ -21,7 +22,7 @@ $buttonSize: 48px;
 
 *{box-sizing: border-box;} //trzyma stronę
 body{
-    background-image: url("../img/Rectangle\ 1.jpg");
+    background-image: url("../img/kalen-emsley-Bkci_8qcdvQ-unsplash.jpg");
     //cover: do przykrycia jakiegoś elementu, *cover przykrywa cały obszar
     background-size: cover;
     //background-size: contain;  zmieści się w borderze
@@ -31,7 +32,10 @@ body{
     margin: 0;
     min-height: 100vh;
     // border: 10px dashed blue; - tutaj dla podglądu
-    color: white;
+    color: #f9fafa;
+
+   
+    
 
     > header{
     
@@ -52,20 +56,20 @@ body{
                 text-decoration: none;
                 display: flex;
                 b{
-                    font-size: 30px;
+                    font-size: 43px;
                 }
             }
         }        
         
         nav{  
-            //border: 2px dashed rgb(77, 153, 74);
+            border: 2px dashed rgb(77, 153, 74);
             position:relative;
-            min-height: $buttonSize;
+            min-height: $buttonSize;                   
             // DOMYSLNE WYSWIETLANE+                    
             #toggler{display:none;}   
                         
             label{
-                //border: 4px dashed yellow;
+                //border: 8px dashed rgb(255, 0, 0);
                 position: absolute;
                 width: $buttonSize;
                 height: $buttonSize;
@@ -75,7 +79,7 @@ body{
                 
                 // HAMBURGER
                 div{
-                    transition: .5s;
+                    transition:.5s;
                     //border:2px solid rgb(218, 205, 25);  
                     background-color: rgb(255, 255, 255);                  
                     border-radius: 5px;
@@ -103,7 +107,7 @@ body{
                 //border:2px dashed red;
                 background-color: rgba(255, 255, 255, 0.2);
                 border-radius: 10px;
-                padding: 0 .7em;
+                padding:0 .7em;
                 list-style: none;
                 //display:flex;
                 display: none;
@@ -186,7 +190,7 @@ body{
             //border:5px dashed rgb(197, 187, 39);
             //display:flex;                 
             > header{
-                border:5px dashed blue;
+                //border:5px dsolid rgb(150, 33, 91);
                 flex:1;
                 h1{
                     margin-bottom: 0;
@@ -212,7 +216,7 @@ body{
                         position: absolute;
                         top: 0;
                         left: .245em;
-                        font-size: 2.5em;
+                        font-size: 2.3em;
                     }
                 }
                 header{
