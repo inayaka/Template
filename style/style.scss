@@ -19,9 +19,26 @@ $buttonSize: 48px;
 
 // @include borderButton(.5em 2.5em);
 
+// SCROLLBARY
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+/* track*/
+::-webkit-scrollbar-track {
+    //box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+    background-color: rgba(146, 128, 128, 0.411)  .5;
+}
+/* handle*/ 
+::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    border-radius: 10px;
+}
 
 *{box-sizing: border-box;} //trzyma stronę
 body{
+    line-height: 1.8em;
     background-image: url("../img/kalen-emsley-Bkci_8qcdvQ-unsplash.jpg");
     //cover: do przykrycia jakiegoś elementu, *cover przykrywa cały obszar
     background-size: cover;
@@ -34,14 +51,16 @@ body{
     // border: 10px dashed blue; - tutaj dla podglądu
     color: #f9fafa;
 
+
    
     
 
     > header{
     
-        padding: 1em 2em;
+        padding: clamp(.5em, 5vw, 5em);
         display:flex;
         justify-content: space-between;
+
         
         // BEZPOŚREDNIE WSZYSTKIE DZIECI HEADERA (DIV I NAV)
         > * {
@@ -55,8 +74,11 @@ body{
                 color:inherit; //dziedziczony po rodzicu
                 text-decoration: none;
                 display: flex;
+                align-items: center;
                 b{
-                    font-size: 43px;
+                    font-family: 'Philosopher';
+                    font-size: clamp(1.5em, 2vw, 2.5em);                    
+                    padding-left: 3em;
                 }
             }
         }        
@@ -105,7 +127,8 @@ body{
                     // display: none;                    
                 ul{                                  
                 //border:2px dashed red;
-                background-color: rgba(255, 255, 255, 0.2);
+                font-family: 'Lato';             
+                background-color: rgba(78, 78, 75, 0.2);
                 border-radius: 10px;
                 padding:0 .7em;
                 list-style: none;
@@ -157,12 +180,16 @@ body{
             }
 
             // NA DUŻE EKRANY
-            @media (min-width:768px){                    
+            @media (min-width:1200px){                    
                 label{display: none;}
                 ul{
+                    font-size: 1.2em;
+                    padding:  .6em 4em;
+                    background-color: rgba(255, 255, 255, 0.2);
                     display: flex;
                     flex-direction: row;
                     position: static;
+
                 }
             }
             
@@ -192,14 +219,19 @@ body{
             > header{
                 //border:5px dsolid rgb(150, 33, 91);
                 flex:1;
+                font-family: 'Lemon';
+                line-height: clamp(2.5em, 4vw, 3em);;
                 h1{
                     margin-bottom: 0;
+                    font-size: clamp(3em, 4vw, 4em);
                 }
                 h2{
                     margin-top: 0;
+                    font-size: clamp(1.5em, 3vw, 2.5em);
                 }
                 button{
                 @include borderButton(.5em 2.5em); 
+                font-size: clamp(1em, 2vw, 1.5em);;
                 margin-bottom: 10vh;
                 }
             }
@@ -212,18 +244,23 @@ body{
                     @include borderButton(1.5em);
                     border-radius: 50%;
                     position: relative;                                   
-                    span{                        
-                        position: absolute;
+                    span{ 
+                        position: absolute;                                                                     width: 100%;
+                        height: 100%;
+                        width: 100%;
                         top: 0;
-                        left: .245em;
-                        font-size: 2.3em;
+                        left: 0;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 2.5em;
                     }
                 }
                 header{
                     .container{
                         padding-left: 1em;
                         overflow-y: scroll;
-                        max-height:45vh;
+                        max-height:35vh;
                     }
                 }
             }
@@ -233,6 +270,12 @@ body{
             //   display:flex;
             // }          
         }
+        .about{
+            h3{
+                font-size: clamp(.5em, 3vw, 3em);;
+                padding-left: .5em;
+            }
+        }
             // .about{
             //   border:2px dashed red;
             // }
@@ -241,6 +284,12 @@ body{
                 margin-left:15vw;
                 .wrapper{
                     display:flex;
+                    >article{
+                        margin-right: 1em;
+                        header .container{
+                            padding: 30%;
+                        }
+                    }
                 }
                 .about{
                     width: 40%;

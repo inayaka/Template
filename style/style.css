@@ -1,8 +1,25 @@
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* track*/
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: rgba(146, 128, 128, 0.411) 0.5;
+}
+
+/* handle*/
+::-webkit-scrollbar-thumb {
+  background-color: #fff;
+  border-radius: 10px;
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
+  line-height: 1.8em;
   background-image: url("../img/kalen-emsley-Bkci_8qcdvQ-unsplash.jpg");
   background-size: cover;
   background-position: center top;
@@ -11,7 +28,7 @@ body {
   color: #f9fafa;
 }
 body > header {
-  padding: 1em 2em;
+  padding: clamp(0.5em, 5vw, 5em);
   display: flex;
   justify-content: space-between;
 }
@@ -23,9 +40,12 @@ body > header .pageLogo a {
   color: inherit;
   text-decoration: none;
   display: flex;
+  align-items: center;
 }
 body > header .pageLogo a b {
-  font-size: 43px;
+  font-family: "Philosopher";
+  font-size: clamp(1.5em, 2vw, 2.5em);
+  padding-left: 3em;
 }
 body > header nav {
   border: 2px dashed rgb(77, 153, 74);
@@ -62,7 +82,8 @@ body > header nav label div:nth-child(3) {
   top: 72.5%;
 }
 body > header nav ul {
-  background-color: rgba(255, 255, 255, 0.2);
+  font-family: "Lato";
+  background-color: rgba(78, 78, 75, 0.2);
   border-radius: 10px;
   padding: 0 0.7em;
   list-style: none;
@@ -101,11 +122,14 @@ body > header nav #toggler:checked ~ label div:nth-child(3) {
   transform: rotate(-45deg);
   top: 45%;
 }
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   body > header nav label {
     display: none;
   }
   body > header nav ul {
+    font-size: 1.2em;
+    padding: 0.6em 4em;
+    background-color: rgba(255, 255, 255, 0.2);
     display: flex;
     flex-direction: row;
     position: static;
@@ -117,12 +141,16 @@ body main {
 }
 body main .wrapper > header {
   flex: 1;
+  font-family: "Lemon";
+  line-height: clamp(2.5em, 4vw, 3em);
 }
 body main .wrapper > header h1 {
   margin-bottom: 0;
+  font-size: clamp(3em, 4vw, 4em);
 }
 body main .wrapper > header h2 {
   margin-top: 0;
+  font-size: clamp(1.5em, 3vw, 2.5em);
 }
 body main .wrapper > header button {
   background-color: transparent;
@@ -133,6 +161,7 @@ body main .wrapper > header button {
   cursor: pointer;
   display: inline-block;
   padding: 0.5em 2.5em;
+  font-size: clamp(1em, 2vw, 1.5em);
   margin-bottom: 10vh;
 }
 body main .wrapper > article {
@@ -154,14 +183,24 @@ body main .wrapper > article .playButton {
 }
 body main .wrapper > article .playButton span {
   position: absolute;
+  width: 100%;
+  height: 100%;
+  width: 100%;
   top: 0;
-  left: 0.245em;
-  font-size: 2.3em;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5em;
 }
 body main .wrapper > article header .container {
   padding-left: 1em;
   overflow-y: scroll;
-  max-height: 45vh;
+  max-height: 35vh;
+}
+body main .about h3 {
+  font-size: clamp(0.5em, 3vw, 3em);
+  padding-left: 0.5em;
 }
 @media (min-width: 768px) {
   body main {
@@ -169,6 +208,12 @@ body main .wrapper > article header .container {
   }
   body main .wrapper {
     display: flex;
+  }
+  body main .wrapper > article {
+    margin-right: 1em;
+  }
+  body main .wrapper > article header .container {
+    padding: 30%;
   }
   body main .about {
     width: 40%;
